@@ -416,4 +416,514 @@
       left:12px;top:12px;
       background:rgba(255,255,255,.9);
       padding:6px 8px;
-      border-
+      border-radius:999px;
+      font-size:11px;
+      font-weight:800;
+      color:var(--purple-900);
+      z-index:2;
+    }
+
+    .product-body{
+      padding:14px;
+      display:flex;
+      flex-direction:column;
+      flex:1;
+    }
+
+    .product-category{
+      color:var(--muted);
+      text-transform:uppercase;
+      font-size:11px;
+      letter-spacing:.08em;
+      font-weight:700;
+    }
+
+    .product-name{
+      min-height:44px;
+      margin:8px 0 6px;
+      font-size:15px;
+      font-weight:800;
+      line-height:1.4;
+      cursor:pointer;
+    }
+
+    .rating{
+      color:#b45309;
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .price-row{
+      display:flex;
+      align-items:baseline;
+      flex-wrap:wrap;
+      gap:7px;
+      margin-top:8px;
+    }
+
+    .current-price{
+      font-size:21px;
+      font-weight:900;
+      letter-spacing:-.04em;
+    }
+
+    .delivery-note{
+      color:var(--muted);
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .old-price{
+      color:#9ca3af;
+      text-decoration:line-through;
+      font-size:12px;
+    }
+
+    .discount{
+      color:var(--green);
+      font-size:11px;
+      font-weight:800;
+    }
+
+    .add-cart{
+      width:100%;
+      margin-top:auto;
+      border:0;
+      border-radius:10px;
+      background:linear-gradient(135deg,var(--purple-700),var(--purple-900));
+      color:#fff;
+      font-weight:800;
+      padding:11px 12px;
+    }
+
+    .whatsapp-order{
+      display:block;
+      width:100%;
+      margin-top:8px;
+      text-align:center;
+      border-radius:10px;
+      background:#16a34a;
+      color:#fff;
+      font-weight:800;
+      font-size:13px;
+      padding:9px 12px;
+    }
+
+    .empty-state{
+      grid-column:1 / -1;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      color:var(--muted);
+      padding:42px 20px;
+      text-align:center;
+      font-weight:700;
+    }
+
+    .footer{
+      background:#1f1632;
+      color:#fff;
+      margin-top:52px;
+    }
+
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:20px;
+      padding:28px 0 36px;
+    }
+
+    .footer h3{
+      margin:0 0 8px;
+      font-size:24px;
+    }
+
+    .footer p{
+      margin:4px 0;
+      color:#d6d1f8;
+      line-height:1.7;
+      font-size:14px;
+    }
+
+    .footer-meta{
+      font-size:13px;
+      color:#d6d1f8;
+      white-space:nowrap;
+    }
+
+    .overlay{
+      position:fixed;
+      inset:0;
+      background:rgba(17,24,39,.52);
+      display:none;
+      z-index:60;
+    }
+
+    .overlay.open{
+      display:block;
+    }
+
+    .cart-panel{
+      position:absolute;
+      right:0;top:0;
+      width:min(420px,100%);
+      height:100%;
+      background:#fff;
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+    }
+
+    .cart-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:8px;
+    }
+
+    .cart-head h3{
+      margin:0;
+      font-size:24px;
+      letter-spacing:-.04em;
+    }
+
+    .close-btn{
+      width:36px;height:36px;
+      border:0;border-radius:50%;
+      background:#f3f4f6;
+      font-size:24px;
+      color:var(--text);
+    }
+
+    .cart-items{
+      flex:1;
+      overflow-y:auto;
+      margin:12px 0;
+    }
+
+    .cart-empty{
+      text-align:center;
+      color:var(--muted);
+      padding:36px 12px;
+      font-weight:700;
+    }
+
+    .cart-item{
+      display:grid;
+      grid-template-columns:56px 1fr auto;
+      gap:10px;
+      align-items:center;
+      padding:12px 0;
+      border-bottom:1px solid var(--line);
+    }
+
+    .cart-thumb{
+      width:56px;height:56px;
+      display:grid;place-items:center;
+      background:linear-gradient(135deg,#f5e8ff,#fff7ed);
+      border-radius:12px;
+      font-size:28px;
+      overflow:hidden;
+    }
+
+    .cart-thumb img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      padding:4px;
+    }
+
+    .cart-item-name{
+      font-size:13px;
+      font-weight:800;
+      margin-bottom:4px;
+    }
+
+    .cart-item-price{
+      color:var(--muted);
+      font-size:11px;
+    }
+
+    .qty-row{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      margin-top:7px;
+    }
+
+    .qty-row button{
+      width:24px;height:24px;border:1px solid var(--line);
+      border-radius:7px;background:#fff;
+      font-weight:800;
+    }
+
+    .remove-btn{
+      border:0 !important;
+      background:transparent !important;
+      color:#dc2626;
+      font-size:10px;
+      font-weight:700;
+      margin-left:4px;
+    }
+
+    .cart-total{
+      border-top:1px solid var(--line);
+      padding-top:16px;
+    }
+
+    .total-line{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-weight:900;
+      margin-bottom:12px;
+    }
+
+    .checkout-btn{
+      width:100%;
+      border:0;
+      border-radius:10px;
+      background:linear-gradient(135deg,var(--orange-500),var(--orange-600));
+      color:#fff;
+      font-weight:900;
+      padding:13px 16px;
+    }
+
+    .gallery-overlay{
+      position:fixed;
+      inset:0;
+      background:rgba(17,24,39,.72);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:16px;
+      z-index:80;
+    }
+
+    .gallery-overlay.open{
+      display:flex;
+    }
+
+    .gallery-card{
+      background:#fff;
+      border-radius:20px;
+      max-width:520px;
+      width:100%;
+      padding:18px;
+      position:relative;
+      text-align:center;
+      max-height:92vh;
+      overflow-y:auto;
+    }
+
+    .gallery-stage{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      margin-top:12px;
+    }
+
+    .gallery-stage img{
+      width:78%;
+      max-height:300px;
+      object-fit:contain;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fafafa;
+    }
+
+    .gallery-nav{
+      width:38px;
+      height:38px;
+      border-radius:50%;
+      border:1px solid var(--line);
+      background:#f3f4f6;
+      font-size:18px;
+      font-weight:800;
+    }
+
+    .gallery-thumbs{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:8px;
+      margin-top:12px;
+    }
+
+    .gallery-thumbs img{
+      width:54px;
+      height:54px;
+      object-fit:cover;
+      border-radius:8px;
+      border:2px solid transparent;
+      opacity:.7;
+      cursor:pointer;
+    }
+
+    .gallery-thumbs img.active{
+      border-color:var(--purple-700);
+      opacity:1;
+    }
+
+    .toast{
+      position:fixed;
+      left:50%;
+      bottom:18px;
+      transform:translateX(-50%) translateY(10px);
+      background:rgba(17,24,39,.94);
+      color:#fff;
+      padding:11px 14px;
+      border-radius:10px;
+      font-size:13px;
+      opacity:0;
+      transition:.2s ease;
+      z-index:90;
+      pointer-events:none;
+    }
+
+    .toast.show{
+      opacity:1;
+      transform:translateX(-50%) translateY(0);
+    }
+
+    @media (max-width:980px){
+      .header-inner{flex-wrap:wrap}
+      .search-wrap{order:3;width:100%;max-width:none}
+      .product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .category-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    }
+
+    @media (max-width:700px){
+      .hero{
+        flex-direction:column;
+        align-items:flex-start;
+        padding:25px 20px;
+      }
+      .hero-art{
+        width:180px;height:180px;
+        font-size:82px;
+      }
+      .feature-row{grid-template-columns:1fr}
+      .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .footer-inner{flex-direction:column;align-items:flex-start}
+    }
+
+    @media (max-width:420px){
+      .product-grid{grid-template-columns:1fr}
+      .category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .brand-name{font-size:16px}
+      .brand-sub{display:none}
+      .header-inner{padding:10px 0}
+      .topbar{font-size:11px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">🎉 Ganpati Traders mein aapka swagat hai — special deals and fast delivery</div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="brand" aria-label="Ganpati Traders home">
+        <span class="brand-mark">🛍️</span>
+        <div>
+          <span class="brand-name">Ganpati Traders</span>
+          <span class="brand-sub">Aapki apni shopping dukaan</span>
+        </div>
+      </a>
+
+      <div class="search-wrap">
+        <form id="searchForm" class="search-box">
+          <input id="searchInput" type="search" placeholder="Search products..." aria-label="Search products" />
+          <button type="submit">⌕</button>
+        </form>
+      </div>
+
+      <div class="header-actions">
+        <button class="cart-btn" id="openCartBtn" type="button">
+          🛒 Cart <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Main categories">
+      <div class="container nav-inner" id="categoryNav"></div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero">
+        <div class="hero-content">
+          <span class="hero-badge">Smart Shopping</span>
+          <h1>Everyday needs,<br>at your doorstep.</h1>
+          <p>Quality products, affordable prices, and trusted service for your daily lifestyle needs.</p>
+          <div class="hero-actions">
+            <button class="primary-btn" id="shopNowBtn" type="button">Shop Now</button>
+            <button class="secondary-btn" type="button">Explore Deals</button>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">🛍️</div>
+      </section>
+
+      <section class="feature-row" aria-label="Benefits">
+        <div class="feature-box">
+          <div class="feature-icon">🚚</div>
+          <div>
+            <span class="feature-title">Fast Delivery</span>
+            <span class="feature-text">Quick doorstep service</span>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">💳</div>
+          <div>
+            <span class="feature-title">Secure Payments</span>
+            <span class="feature-text">Safe and trusted checkout</span>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">🛎️</div>
+          <div>
+            <span class="feature-title">Support</span>
+            <span class="feature-text">Friendly customer care</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-head">
+        <div>
+          <h2>Categories</h2>
+          <p>Choose what fits your needs</p>
+        </div>
+      </div>
+
+      <div id="categoryGrid" class="category-grid"></div>
+
+      <div class="section-head" id="productsSection">
+        <div>
+          <h2>Popular Products</h2>
+          <p>Handpicked for quality and value</p>
+        </div>
+        <span class="section-meta" id="resultCount">0 products</span>
+      </div>
+
+      <div id="productGrid" class="product-grid"></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>Ganpati Traders</h3>
+        <p>Your trusted shopping destination for essentials and lifestyle picks.</p>
+        <p>📞 Contact: <a href="tel:9310833172">9310833172</a></p>
+      </div>
+      <div class="footer-meta">© <span id="year"></span> Ganpati Traders</div>
+    </div>
+  </footer>
+
+  <div class="overlay" id="cartOverlay">
+    <aside class="cart-panel" aria-modal="true" role="dialog" aria-labelledby="cartT
